@@ -1,6 +1,4 @@
-﻿using System.IO.Enumeration;
-
-namespace NonNullableReferenceTypes
+﻿namespace NonNullableReferenceTypes
 {
     public class NonNullableDataManager
     {

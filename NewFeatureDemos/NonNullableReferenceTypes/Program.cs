@@ -4,7 +4,7 @@
     {
         public static void Main()
         {
-            var manager = new NonNullableDataManager(null);
+            var manager = new NonNullableDataManager(null, 10, null);
         }
     }
 }
