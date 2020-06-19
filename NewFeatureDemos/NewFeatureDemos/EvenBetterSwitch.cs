@@ -7,6 +7,33 @@ namespace NewFeatureDemos
 {
     public class EvenBetterSwitch
     {
+        //public static bool ElligibleForBetaAccess((bool RequestedBeta, bool AttendedEvent, bool IsVip, int UserId, string Name) customerInfo)
+        //{
+        //    switch (customerInfo)
+        //    {
+        //        case (_, _, true, _, "Patrick"):
+        //            return false;
+        //        case (true, _, true, _, _):
+        //            return true;
+        //        case (true, true, _, _, _) c when c.UserId <= 10000:
+        //            return true;
+        //        case (true, true, _, _, _):
+        //            return false;
+        //        default:
+        //            return false;
+        //    }
+        //}
+
+        public static bool ElligibleForBetaAccess((bool RequestedBeta, bool AttendedEvent, bool IsVip, int UserId, string Name) customerInfo) =>
+            customerInfo switch
+            {
+                (_, _, true, _, "Patrick") => false,
+                (true, _, true, _, _) => true,
+                (true, true, _, _, _) c when c.UserId <= 10000 => true,
+                (true, true, _, _, _) => false,
+                _ => false
+            };
+
         public enum VoltageSupport
         {
             American115,
